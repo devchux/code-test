@@ -34,7 +34,7 @@ const useAPI = () => {
         return [];
       }
       const data = await response.json();
-      toast(`Login Successful`, { type: 'success' });
+      toast(`Login Successful as ${data.user}`, { type: 'success' });
     } catch (error) {
       console.log(error);
 
@@ -121,7 +121,6 @@ const useAPI = () => {
       toast(`API request failed: ${error.message}`, { type: 'error' });
     }
   };
-
 
   return {
     getTasks,

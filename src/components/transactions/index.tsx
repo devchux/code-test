@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import { toast } from 'react-toastify';
-
 import { useSelector, actions, useDispatch } from '../../store';
 import useQuery from '../../hooks/useQuery';
 import useAPI from '../../hooks/useAPI';
