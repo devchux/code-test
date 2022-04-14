@@ -5,8 +5,6 @@ function useQuery() {
   const history = useHistory();
   const location = useLocation();
 
-  console.log(location);
-
   // Create an object out of the URL query parameters
   const query = useMemo(() => {
     const query = new URLSearchParams(location.search);
@@ -29,7 +27,6 @@ function useQuery() {
       query.forEach((value, key) => {
         newQuery[key] = value;
       });
-
       // Then update or delete any new query parameters from the update object
       Object.keys(update).forEach((key) => {
         if (update[key]) newQuery[key] = `${update[key]}`;

@@ -35,7 +35,6 @@ const useAPI = () => {
       }
       const data = await response.json();
       toast(`Login Successful`, { type: 'success' });
-      console.log(data);
     } catch (error) {
       console.log(error);
 
@@ -116,13 +115,13 @@ const useAPI = () => {
         }, {});
       dispatch(actions.addTransactions({ transactions: newTransactions }));
       toast(`Delete Successful`, { type: 'success' });
-      console.log(data);
     } catch (error) {
       console.log(error);
 
       toast(`API request failed: ${error.message}`, { type: 'error' });
     }
   };
+
 
   return {
     getTasks,

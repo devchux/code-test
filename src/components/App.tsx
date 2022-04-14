@@ -15,6 +15,7 @@ const App: FC = () => {
     <div className="App">
       <nav>
         <NavLink to="/">Welcome</NavLink>
+        <NavLink to="/transactions">Transactions</NavLink>
       </nav>
       <Switch>
         <Route exact path="/">

@@ -14,16 +14,21 @@ const Transactions = () => {
 
   useEffect(() => {
     getTransactions(query.page).then((new_transactions) => {
-      dispatch(actions.addTransactions({ transactions: { ...transactions, ...new_transactions } }));
+      dispatch(actions.addTransactions({ transactions: { ...new_transactions, ...transactions } }));
     });
   }, [getTransactions, dispatch, query.page]);
-
-  console.log(transactions);
 
   return (
     <div className="transaction-page">
       <div className="add-more-btn-wrapper">
-        <button type="button">More</button>
+        <button
+          type="button"
+          onClick={() => {
+            setQuery({ page: query.page ? parseInt(query.page) + 1 : 1 });
+          }}
+        >
+          More
+        </button>
       </div>
       <div className="table-wrapper">
         {Object.values(transactions).length ? (
