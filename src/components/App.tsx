@@ -7,6 +7,8 @@ import { Switch, Route, Redirect, NavLink } from 'react-router-dom';
 
 import './App.scss';
 import Welcome from './Welcome';
+import Login from './login';
+import Transactions from './transactions';
 
 const App: FC = () => {
   return (
@@ -17,6 +19,12 @@ const App: FC = () => {
       <Switch>
         <Route exact path="/">
           <Welcome />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/transactions">
+          <Transactions />
         </Route>
         <Redirect to="/" />
       </Switch>

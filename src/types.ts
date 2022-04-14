@@ -18,3 +18,10 @@ export type State = {
   };
   tasks: Task[];
 };
+
+export type LoginInputState = {
+  email: string;
+  password: string;
+};
+
+export type HandleLoginInputChangeFuncType = (type: string, value: string) => void;

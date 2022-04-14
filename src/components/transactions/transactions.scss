@@ -1,0 +1,43 @@
+@import '../../variables';
+
+.transaction-page {
+  width: 100%;
+  padding: 2em;
+
+  .add-more-btn-wrapper {
+    padding: 2em 0;
+
+    button {
+      border: none;
+      color: $white;
+      background-color: $light-purple;
+      padding: 0.5em 3em;
+    }
+  }
+
+  .table-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  .delete-td {
+    button {
+      border: none;
+      color: $white;
+      background-color: $red;
+      padding: 0.5em 2em;
+    }
+  }
+}

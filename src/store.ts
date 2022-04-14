@@ -12,9 +12,11 @@ export const { actions, reducer } = createSlice({
   name: 'store',
   initialState,
   reducers: {
-    set: (state, action: PayloadAction<Partial<State>>) => ({ ...state, ...action.payload })
-    // TODO: Write this reducer
-    // addTransactions:
+    set: (state, action: PayloadAction<Partial<State>>) => ({ ...state, ...action.payload }),
+    addTransactions: (state, action: PayloadAction<Partial<State>>) => ({
+      ...state,
+      ...action.payload
+    })
   }
 });
 

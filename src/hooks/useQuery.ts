@@ -5,6 +5,8 @@ function useQuery() {
   const history = useHistory();
   const location = useLocation();
 
+  console.log(location);
+
   // Create an object out of the URL query parameters
   const query = useMemo(() => {
     const query = new URLSearchParams(location.search);
